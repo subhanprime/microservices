@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: backend-mi1
+  labels:
+    type: testing
+    mode: server
+spec:
+  containers:
+    - name: backend-contianer
+      image: subhanali/microservices:latest
+      ports:
+        - containerPort: 5000
+          hostPort: 5001
