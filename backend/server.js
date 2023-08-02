@@ -5,6 +5,11 @@ const PORT = process.env.PORT || 5000;
 app.get("/", (req, res) => {
   return res.status(200).json({ message: "this is server running" });
 });
+
+app.get("/me", (req, res) => {
+  return res.status(200).json({ message: "microservices one is running" });
+});
+
 const connectDb = async () => {
    console.log("connect function call")
   const resp = await mongoose.connect("mongodb://mongo-db-service/podDb");
